@@ -1,0 +1,70 @@
+{
+  "study": "Three-Season Spectral–Phenological Modeling for Source-Domain Classification and Cross-Region Candidate Mapping of Populus euphratica Using Sentinel-2 Imagery",
+  "paper_id": "forests-4583393",
+  "data_year": 2024,
+  "season_windows": {
+    "spring": "April 20–May 10",
+    "summer": "July 1–31",
+    "autumn": "September 20–October 20"
+  },
+  "classes": [
+    "Populus euphratica",
+    "Tamarix",
+    "Sand",
+    "Water",
+    "Grassland",
+    "Cropland"
+  ],
+  "per_season_bands": [
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12"
+  ],
+  "per_season_indices": [
+    "NDVI",
+    "NDMI",
+    "EVI",
+    "SAVI",
+    "NDRE",
+    "CIrededge",
+    "IRECI",
+    "NBR",
+    "BSI"
+  ],
+  "num_seasons": 3,
+  "num_features_per_season": 19,
+  "sample_count": 58930,
+  "spatial_block_test": {
+    "train": 35008,
+    "validation": 9915,
+    "test": 14007,
+    "block_scale_km_approx": 2.56,
+    "seed_repetitions": [
+      42,
+      2026,
+      3407
+    ],
+    "training_seeds_share_one_spatial_partition": true
+  },
+  "tt3_summary": {
+    "embedding_width": 128,
+    "encoder_layers": 3,
+    "attention_heads": 4,
+    "feedforward_width": 256,
+    "encoder_activation": "ReLU",
+    "encoder_dropout": 0.1,
+    "classifier_hidden_width": 64,
+    "classifier_dropout": 0.3,
+    "temporal_pooling": "mean",
+    "seasonal_positional_encoding": false,
+    "trainable_parameters": 408646
+  },
+  "release_scope": "Documentation, experiment metadata, one observed per-class test report, and analysis-only code; no training/inference implementation."
+}
